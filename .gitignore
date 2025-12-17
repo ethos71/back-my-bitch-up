@@ -1,22 +1,5 @@
-# Temporary extraction directories
-temp_extract/
-takeout/temp_extract/
-
-# Original Takeout source files (too large for git)
-takeout/source/
-
-# Individual files over 100MB (too large for GitHub)
-takeout/archives/2017_part04.zip
-takeout/archives/2018_part13.zip
-takeout/archives/2019_part10.zip
-takeout/archives/2019_part19.zip
-takeout/archives/2021_part06.zip
-takeout/archives/2021_part12.zip
-takeout/archives/2021_part22.zip
-takeout/archives/2021_part23.zip
-takeout/archives/2024_part04.zip
-takeout/archives/unknown_dates_part02.zip
-takeout/archives/unknown_dates_part06.zip
+# Data folder - all data files excluded from git
+data/
 
 # OS files
 .DS_Store

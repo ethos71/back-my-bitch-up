@@ -114,6 +114,11 @@ scripts/                 # All automation scripts (NEW: all scripts go here)
 ├── auto_commit.sh
 └── sync_from_gdrive.sh
 docs/                    # All documentation (NEW: all docs go here)
+├── robots/              # Robot memory system - AI agent context and decisions
+│   ├── README.md        # Memory system overview
+│   ├── decisions.md     # Architectural decisions
+│   ├── procedures.md    # Standard operating procedures
+│   └── troubleshooting.md  # Common issues and solutions
 └── CHANGELOG.md
 data/                    # All data files (NEW: all data goes here)
 ├── takeout/
@@ -125,12 +130,17 @@ data/                    # All data files (NEW: all data goes here)
 │   │   └── 2024_part15.zip
 │   └── extracted_media/ # Legacy directory (can be removed)
 └── gdrive_backup/       # Google Drive backup data
+test/                    # Test suite for validation
+├── test_system_health.py    # System structure and health tests
+├── test_integration.py      # Integration tests
+└── README.md               # Test documentation
 ```
 
 **IMPORTANT:** 
 - All new scripts must be created in `scripts/` folder
-- All new documentation must be created in `docs/` folder
+- All new documentation must be created in `docs/robots/` folder (for AI memory)
 - All data files must be stored in `data/` folder
+- All tests must be created in `test/` folder
 
 ## Important Notes
 
@@ -188,6 +198,32 @@ If you need to restore data:
 **Optional Monthly:**
 - Check repository size: `du -sh .git`
 - Verify GitHub remote is accessible: `git fetch origin`
+
+## Robot Memory System
+
+The `docs/robots/` folder contains AI agent memory - documentation that provides context, decisions, and procedures across sessions. This ensures consistent behavior and preserves institutional knowledge.
+
+**Always reference these files:**
+- `docs/robots/decisions.md` - Architectural decisions and rationale
+- `docs/robots/procedures.md` - Standard operating procedures (includes TEST REQUIREMENT)
+- `docs/robots/troubleshooting.md` - Common issues and solutions
+
+**When to update robot memory:**
+- After implementing new features
+- When solving complex problems
+- When establishing new conventions
+- When making architectural decisions
+
+## Test-Driven Completion Protocol
+
+**CRITICAL:** Before reporting any task as "done" or "fixed", you MUST:
+
+1. Run all tests: `python3 -m pytest test/ -v`
+2. Verify all tests pass
+3. If tests fail, fix the issues and re-test
+4. Only report completion after all tests pass
+
+This is documented in `docs/robots/procedures.md` and is non-negotiable.
 
 ## Contact & Questions
 
